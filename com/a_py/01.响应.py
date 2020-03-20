@@ -34,5 +34,5 @@ def temp():
 
 
 if __name__ == '__main__':
-    port = 12306;
+    port = 12306
     app.run(port=port, debug=True)

@@ -2,6 +2,6 @@
 
 ### Project introduction
 
-```angular2html
-This project python3
+```
+Python3
 ```

@@ -15,7 +15,6 @@ def home():
     ]
     return render_template('home.html', msg='Welcome to home page', users=users)
 
-
 # 全局异常处理
 # @app.errorhandler(404)
 # def error_hand():

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+</head>
+<body>
+<input type="hidden" value="{{ list }}">
+<h1>{{ msg }}</h1>
+<ul>
+    {% for item in list %}
+        <li>
+            <a href="{{ item[2] }}">
+                {% for v in item %}
+                    <span>{{ v }}</span>
+                {% endfor %}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type: 'GET',
+            url: '/api/list',
+            dataType: 'json',
+            success: function (res) {
+                // debugger
+                console.log(res)
+            }
+        })
+    })
+</script>
+</body>
+</html>
